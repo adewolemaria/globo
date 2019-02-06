@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, FlatList, TouchableHighlight } from 'react-native';
 import { QuizData } from '../data/QuizQuestions.js';
-import { Questions } from '../sections/Questions.js'
+import { Question } from '../sections/Questions.js'
 
 export class Quiz extends React.Component {
   static navigationOptions = {
@@ -71,7 +71,7 @@ export class Quiz extends React.Component {
               <FlatList
                   data={this.state.questionList}
                   renderItem={({item}) => 
-                <Questions 
+                <Question 
                   question={item.question}
                   answer1={item.answer1}
                   answer2={item.answer2}
@@ -80,13 +80,13 @@ export class Quiz extends React.Component {
                   correctAnswer={item.correctAnswer}
                   scoreUpdate={this.updateScore}
                 />
-                }
-                  />
-            )}  
+              }
+            />
+          )}  
 
-            { !this.state.completeQuiz && (
+            { !this.state.completedQuiz && (
               <TouchableHighlight style={styles.disabled}>
-              <Text> Answer all the questions</Text>
+                <Text> Answer all the questions</Text>
               </TouchableHighlight>
             )}
             { this.state.completedQuiz && (

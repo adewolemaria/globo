@@ -10,7 +10,12 @@ import { Register } from './app/views/Register.js'
 import { Login } from './app/views/Login.js'
 
 import { Quiz } from './app/views/Quiz.js';
-import { Finish } from './app/views/QuizFinish.js'
+import { Finish } from './app/views/QuizFinish.js';
+
+import { Blog } from './app/views/Blog.js';
+import { BlogDetail } from './app/views/BlogDetail.js';
+
+import { About } from './app/views/About.js';
 
 
 const MyRoutes = StackNavigator({
@@ -33,11 +38,20 @@ const MyRoutes = StackNavigator({
     screen: Login
   },
  QuizRT: {
-   screen: Quiz
+   screen: Quiz 
  },
  FinishRT: {
    screen: Finish
- }
+ },
+ BlogRT: {
+   screen: Blog
+ },
+ BlogDetailRT: {
+   screen: BlogDetail
+ },
+  AboutRT: {
+    screen: About
+  }
 },
   {
     initialRouteName: 'HomeRT'

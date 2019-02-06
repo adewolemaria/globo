@@ -13,7 +13,7 @@ export class Finish extends React.Component {
 
   render() {
     let userScore = this.props.navigation.getParam('score', 'Error - No score returned');
-    let questionMissed = this.props.navigation.getParam('missed', 'Error - No missed questions');
+    let questionsMissed = this.props.navigation.getParam('missed', 'Error - No missed questions');
     let totalQuestions = this.props.navigation.getParam('questions', 'Error - No questions returned ')
     return(
       <View style={styles.container}>
